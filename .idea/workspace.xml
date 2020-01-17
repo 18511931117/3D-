@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be973267-8fed-44c6-b41c-fba1dc5b01cd" name="默认更改列表" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SJlLCkvo3lQWW9qwjKbqSpsuCJ" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../threejs.3droom" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\86185\Desktop\后台" />
+      <recent name="C:\Users\86185\Desktop\后台\label2" />
+      <recent name="C:\Users\86185\Desktop\后台\img" />
+      <recent name="C:\Users\86185\Desktop\后台\js" />
+      <recent name="C:\Users\86185\Desktop\后台\js\role" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86185\Desktop\后台\bootstrap-table" />
+      <recent name="C:\Users\86185\Desktop\后台\img" />
+      <recent name="C:\Users\86185\Desktop\后台\js" />
+      <recent name="C:\Users\86185\Desktop\后台\js\map" />
+      <recent name="C:\Users\86185\Desktop\后台" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be973267-8fed-44c6-b41c-fba1dc5b01cd" name="默认更改列表" comment="" />
+      <created>1571289520800</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571289520800</updated>
+      <workItem from="1571289521987" duration="15470000" />
+      <workItem from="1571308939883" duration="1211000" />
+      <workItem from="1571359590209" duration="23923000" />
+      <workItem from="1571619450752" duration="24201000" />
+      <workItem from="1571652906143" duration="322000" />
+      <workItem from="1571705548764" duration="34671000" />
+      <workItem from="1571792081372" duration="27904000" />
+      <workItem from="1571878348788" duration="23832000" />
+      <workItem from="1571965293160" duration="18212000" />
+      <workItem from="1572224634707" duration="24870000" />
+      <workItem from="1572265277900" duration="12000" />
+      <workItem from="1572265460333" duration="1067000" />
+      <workItem from="1572310605303" duration="22837000" />
+      <workItem from="1572340086510" duration="10647000" />
+      <workItem from="1572398571380" duration="33000" />
+      <workItem from="1572401916925" duration="3065000" />
+      <workItem from="1572414830860" duration="146000" />
+      <workItem from="1572418233516" duration="3455000" />
+      <workItem from="1572436294276" duration="621000" />
+      <workItem from="1572439150498" duration="750000" />
+      <workItem from="1572484152343" duration="27511000" />
+      <workItem from="1572568860844" duration="4887000" />
+      <workItem from="1572580566733" duration="26075000" />
+      <workItem from="1572659019339" duration="26389000" />
+      <workItem from="1572827814234" duration="19763000" />
+      <workItem from="1572916649232" duration="599000" />
+      <workItem from="1572923300945" duration="23399000" />
+      <workItem from="1573002910785" duration="3563000" />
+      <workItem from="1573031926950" duration="4070000" />
+      <workItem from="1573088845066" duration="1210000" />
+      <workItem from="1573091460463" duration="18941000" />
+      <workItem from="1573175370395" duration="45285000" />
+      <workItem from="1573367493280" duration="905000" />
+      <workItem from="1573369458031" duration="10775000" />
+      <workItem from="1573522837459" duration="20562000" />
+      <workItem from="1573607218760" duration="22188000" />
+      <workItem from="1573694461587" duration="4619000" />
+      <workItem from="1573722282045" duration="5910000" />
+      <workItem from="1573737461876" duration="7774000" />
+      <workItem from="1573799653434" duration="1070000" />
+      <workItem from="1573957474791" duration="1327000" />
+      <workItem from="1574132740803" duration="1493000" />
+      <workItem from="1574151967872" duration="1231000" />
+      <workItem from="1574258492404" duration="3043000" />
+      <workItem from="1574387586503" duration="8206000" />
+      <workItem from="1574491716679" duration="1760000" />
+      <workItem from="1574494737957" duration="4991000" />
+      <workItem from="1574562920020" duration="4517000" />
+      <workItem from="1574750461990" duration="2763000" />
+      <workItem from="1576812625186" duration="996000" />
+      <workItem from="1577246297957" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/task/form_validation.html</url>
+          <line>703</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

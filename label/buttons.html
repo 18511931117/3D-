@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="../img/favicon.html">
+
+    <title>设备标签绑定</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css">
+    <style>
+
+
+    </style>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section id="container" class="">
+        <!--header start-->
+        <h1>wangdehui</h1>
+        <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+            </div>
+            <!--logo start-->
+            <a href="#" class="logo">江苏有线</a>
+            <!--logo end-->
+
+            <div class="top-nav ">
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="../img/avatar1_small.jpg">
+                            <span class="username">Jhon Doue</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <!--                          <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>-->
+                            <!--                          <li><a href="#"><i class="icon-cog"></i> Settings</a></li>-->
+                            <!--                          <li><a href="#"><i class="icon-bell-alt"></i> Notification</a></li>-->
+                            <li><a href="../login.html"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="">
+                        <a class="" href="../index.html">
+                            <i class="icon-dashboard"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu active">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>设备管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="general.html">设备信息管理</a></li>
+                            <li class="active"><a class="" href="buttons.html">设备标签绑定</a></li>
+                            <li><a class="" href="widget.html">设备贴标</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-cogs"></i>
+                            <span>线缆管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="../label2/grids.html">线缆信息管理</a></li>
+                            <li><a class="" href="../label2/calendar.html">线缆标签绑定</a></li>
+                            <li><a class="" href="../label2/charts.html">线缆贴标</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-tasks"></i>
+                            <span>任务管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="../task/form_component.html">盘点任务</a></li>
+                            <li><a class="" href="../task/form_wizard.html">调拨任务</a></li>
+                            <li><a class="" href="../task/form_validation.html">借用任务</a></li>
+                            <li><a class="" href="../task/form_task.html">维修任务</a></li>
+                            <li><a class="" href="../task/tabledetail.html">报废任务</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-th"></i>
+                            <span>日志管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="../log/basic_table.html">盘点任务日志</a></li>
+                            <li><a class="" href="../log/basic_table2.html">调拨任务日志</a></li>
+                            <li><a class="" href="../log/basic_table3.html">借用任务日志</a></li>
+                            <li><a class="" href="../log/basic_table4.html">维修任务日志</a></li>
+                            <li><a class="" href="../log/basic_table5.html">操作日志</a></li>
+                            <li><a class="" href="../log/basic_table6.html">告警日志</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-glass"></i>
+                            <span>系统管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="../system/blank.html">账号管理</a></li>
+                            <li><a class="" href="../system/role.html">角色管理</a></li>
+                            <li><a class="" href="../system/menu.html">菜单管理</a></li>
+                            <li><a class="" href="../system/anti.html">参数设置</a></li>
+                            <li><a class="" href="../system/profile.html">机构管理</a></li>
+                            <li><a class="" href="../system/invoice.html">机房管理</a></li>
+                            <li><a class="" href="../system/jjmangt.html">机架管理</a></li>
+                            <li><a class="" href="../system/fenclass.html">设备分类管理</a></li>
+                            <li><a class="" href="../system/lablemangt.html">标签管理</a></li>
+                            <li><a class="" href="../system/3djfang.html">3D机房</a></li>
+                            <li><a class="" href="../404.html">404 Error</a></li>
+                            <li><a class="" href="../500.html">500 Error</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="" href="../login.html">
+                            <i class="icon-user"></i>
+                            <span>Login Page</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <!-- page start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                设备标签绑定
+                            </header>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="row-fulid">
+                            <div class="panel-body" style="background: #fff;margin-bottom: 20px">
+                                <form class="form-horizontal form-inline" method="get">
+                                    <div class="form-group col-sm-5">
+                                        <label class="control-label col-sm-4">所属机房</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-control">
+                                                <option>Guc01</option>
+                                                <option>M2机房</option>
+                                                <option>南京广电</option>
+                                                <option>机房</option>
+                                                <option>测试机房</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="control-label col-sm-4">设备分类</label>
+                                        <div class=" col-sm-7">
+                                            <select class="form-control">
+                                                <option>服务器</option>
+                                                <option>路由器</option>
+                                                <option>防火墙</option>
+                                                <option>交换机</option>
+                                                <option>电子设备</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-info">搜索</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <section class="panel">
+                                    <table class="layui-hide" id="test" lay-filter="test"></table>
+                                    <script type="text/html" id="barDemo">
+                                        <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+                                    </script>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row-fulid">
+                            <section class="panel">
+                                <div class="panel-body">
+                                    <form class="form-inline" role="form">
+                                        <div class="form-group col-sm-5">
+                                            <label class="sr-only" for="exampleInputEmail2">编号从</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail2"
+                                                placeholder="编号从">
+                                        </div>
+                                        <div class="form-group col-sm-5">
+                                            <label class="sr-only" for="exampleInputPassword2">编号到</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword2"
+                                                placeholder="编号到">
+                                        </div>
+                                        <button type="submit" class="btn btn-info">查询</button>
+                                    </form>
+
+                                </div>
+                            </section>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <section class="panel">
+                                    <table class="layui-hide" id="test2" lay-filter="test2"></table>
+                                    <script type="text/html" id="barDemo2">
+                                        <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+                                    </script>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page end-->
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-6">
+                        <button type="button" class="btn btn-info" style="width: 110px" id="band">绑定</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--main content end-->
+    </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.scrollTo.min.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+
+    <!--common script for all pages-->
+    <script src="../js/common-scripts.js"></script>
+    <script>
+
+    </script>
+
+</body>
+<script src="https://www.layuicdn.com/layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        var index = 1
+        table.render({
+            elem: '#test'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type:'numbers'},
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: '设备名称', title: '设备名称'}
+                , {field: '所属机房', title: '所属机房',}
+                , {field: '机架', title: '机架'}
+                , {field: '几位', title: '几位'}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                },
+                {
+                    "id": 20000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                },
+                {
+                    "id": 30000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                },
+            ]
+            ,page: true
+        });
+        table.render({
+            elem: '#test2'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type:'numbers'},
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: '编号', title: '编号'}
+                , {field: 'Tid' , title: 'Tid',}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo2'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                },
+                {
+                    "id": 20000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+
+                },
+                {
+                    "id": 30000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                },
+            ]
+            ,page: true
+        });
+        //监听行工具事件
+        table.on('tool(test)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'export') {
+                layer.msg("这是导出++")
+            }
+        });
+        table.on('tool(test2)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'export') {
+                layer.msg("这是导出")
+            }
+        });
+
+
+        $('.laytable-cell-numbers').html('')
+        table.on('checkbox(test)', function(obj){
+            console.log(this)
+            if($(this).attr("lay-filter")=="layTableAllChoose"){
+                if ($(this).is(":checked")) {
+                    var num = $("div[lay-filter=LAY-table-1] tbody tr td:first-child").length
+                    console.log(num)
+                    for (var i = 0; i < num; i++) {
+                        $("div[lay-filter=LAY-table-1] tbody tr td:first-child").eq(i).children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }else{
+                    $("div[lay-filter=LAY-table-1] tbody tr td:first-child").children(".laytable-cell-numbers").html("")
+                }
+            }else{
+                if ($(this).is(":checked")) {
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").length
+
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html(count)
+                    $(this).val();
+                    $(this).attr("data-value", count)
+                }else {
+                    var val = $(this).parent().parent().prev().children(".laytable-cell-numbers").html();
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                    //table2中的对应选中时重新排列
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").length
+                    var num = $("div[lay-filter=LAY-table-1] tbody tr td:first-child")
+                    console.log(count)
+                    var checkLength = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+                    var checkval = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked")
+                    for (var i = 0; i < checkLength; i++) {
+                        if (checkval.eq(i).parent().parent().prev().children(".laytable-cell-numbers").html() == val) {
+                            checkval.eq(i).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                            checkval.eq(i).removeClass("layui-form-checked")
+                            checkval.eq(i).prev().attr("checked",false)
+                        }
+                    }
+                    //当钱table中的数组重排
+                    for (var i = 0; i < count; i++) {
+                        $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+
+                        $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+
+                    }
+
+                }
+            }
+        });
+
+        table.on('checkbox(test2)', function(obj){
+            console.log(this)
+            if($(this).attr("lay-filter")=="layTableAllChoose"){
+                if ($(this).is(":checked")) {
+                    var num = $("div[lay-filter=LAY-table-2] tbody tr td:first-child").length
+                    console.log(num)
+                    for (var i = 0; i < num; i++) {
+                        $("div[lay-filter=LAY-table-2] tbody tr td:first-child").eq(i).children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }else{
+                    $("div[lay-filter=LAY-table-2] tbody tr td:first-child").children(".laytable-cell-numbers").html("")
+                }
+            }else{
+                if ($(this).is(":checked")) {
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+                    console.log(count)
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html(count)
+                    $(this).val();
+                    $(this).attr("data-value", count)
+                }else {
+                    var val = $(this).parent().parent().prev().children(".laytable-cell-numbers").html();
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                    //table2中的对应选中时重新排列
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+
+                    var num = $("div[lay-filter=LAY-table-2] tbody tr td:first-child")
+                    console.log(count)
+                    for (var i = 0; i < count; i++) {
+                        $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }
+            }
+        });
+    });
+</script>
+</html>

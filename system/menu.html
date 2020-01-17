@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="../img/favicon.html">
+
+    <title>机房管理</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.5/css/layui.css">
+
+    <style>
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" class="">
+    <!--header start-->
+    <header class="header white-bg">
+        <div class="sidebar-toggle-box">
+            <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+        </div>
+        <!--logo start-->
+        <a href="#" class="logo" >江苏在线</a>
+        <!--logo end-->
+        <div class="top-nav ">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder="Search">
+                </li>
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="../img/avatar1_small.jpg">
+                        <span class="username">Jhon Doue</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <div class="log-arrow-up"></div>
+                        <li><a href="../login.html"><i class="icon-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu">
+                <li class="">
+                    <a class="" href="../index.html">
+                        <i class="icon-dashboard"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-book"></i>
+                        <span>设备管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="../label/general.html">设备信息管理</a></li>
+                        <li><a class="" href="../label/buttons.html">设备标签管理</a></li>
+                        <li><a class="" href="../label/widget.html">设备贴标</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-cogs"></i>
+                        <span>线缆管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="../label2/grids.html">线缆信息管理</a></li>
+                        <li><a class="" href="../label2/calendar.html">线缆标签管理</a></li>
+                        <li><a class="" href="../label2/charts.html">线缆贴标</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-tasks"></i>
+                        <span>任务管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="../task/form_component.html">盘点任务</a></li>
+                        <li><a class="" href="../task/form_wizard.html">调拨任务</a></li>
+                        <li><a class="" href="../task/form_validation.html">借用任务</a></li>
+                        <li><a class="" href="../task/form_task.html">维修任务</a></li>
+                        <li><a class="" href="../task/tabledetail.html">报废任务</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon-th"></i>
+                        <span>日志管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="../log/basic_table.html">盘点任务日志</a></li>
+                        <li><a class="" href="../log/basic_table2.html">调拨任务日志</a></li>
+                        <li><a class="" href="../log/basic_table3.html">借用任务日志</a></li>
+                        <li><a class="" href="../log/basic_table4.html">维修任务日志</a></li>
+                        <li><a class="" href="../log/basic_table5.html">操作日志</a></li>
+                        <li><a class="" href="../log/basic_table6.html">告警日志</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu active">
+                    <a href="javascript:;" class="">
+                        <i class="icon-glass"></i>
+                        <span>系统管理</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="../system/blank.html">账号管理</a></li>
+                        <li><a class="" href="../system/role.html">角色管理</a></li>
+                        <li class="active"><a class="" href="../system/menu.html">菜单管理</a></li>
+                        <li><a class="" href="../system/anti.html">参数设置</a></li>
+                        <li><a class="" href="../system/profile.html">机构管理</a></li>
+                        <li><a class="" href="../system/invoice.html">机房管理</a></li>
+                        <li><a class="" href="../system/jjmangt.html">机架管理</a></li>
+                        <li><a class="" href="../system/fenclass.html">设备分类管理</a></li>
+                        <li><a class="" href="../system/lablemangt.html">标签管理</a></li>
+                        <li><a class="" href="../system/3djfang.html">3D机房</a></li>
+                        <li><a class="" href="../404.html">404 Error</a></li>
+                        <li><a class="" href="../500.html">500 Error</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="" href="../login.html">
+                        <i class="icon-user"></i>
+                        <span>Login Page</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <!-- invoice start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            角色管理
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="form-horizontal" method="get">
+                        <div class="form-group col-sm-8">
+                            <label class="control-label col-sm-4">角色名称</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="角色名称">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-success">查询</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">新建角色</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <table class="layui-hide" id="test" lay-filter="test"></table>
+                        <script type="text/html" id="barDemo">
+                            <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+                        </script>
+                    </section>
+                </div>
+            </div>
+
+            <!-- invoice end-->
+        </section>
+    </section>
+    <!--main content end-->
+    <section>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width: 60%">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            新建角色
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal tasi-form" method="get">
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">角色名称</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="角色名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">角色描述</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">角色权限</label>
+                                <div class="col-sm-10">
+<!--                                    <div class="tree1">-->
+<!--                                    </div>-->
+                                    <div id="test12" class="demo-tree-more"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            提交更改
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </section>
+</section>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.scrollTo.min.js"></script>
+<script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+<!--common script for all pages-->
+<script src="../js/common-scripts.js"></script>
+
+<script src="https://www.layuicdn.com/layui-v2.5.5/layui.js"></script>
+
+<script>
+
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: '角色名', title: '角色名'}
+                , {field: '拥有权限', title: '拥有权限',}
+                , {field: '具体描述', title: '具体描述'}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "角色名": "user-0",
+                    "拥有权限": "user-0",
+                    "具体描述": "女",
+                },
+            ]
+            ,page: true
+        });
+
+        //监听行工具事件
+        table.on('tool(test)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+                layer.prompt({
+                    formType: 2
+                    ,value: data.email
+                }, function(value, index){
+                    obj.update({
+                        email: value
+                    });
+                    layer.close(index);
+                });
+            }
+        });
+    });
+
+
+    layui.use(['tree', 'util'], function(){
+        var tree = layui.tree,
+            layer = layui.layer,
+            util = layui.util
+
+            //模拟数据
+            ,data = [{
+                title: '管理'
+                ,id: 1
+                ,field: 'name1'
+                ,checked: true
+                ,spread: true
+                ,children: [{
+                    title: '二级1-1 可允许跳转'
+                    ,id: 3
+                    ,field: 'name11'
+                    ,href: 'https://www.layui.com/'
+                    ,children: [{
+                        title: '三级1-1-3'
+                        ,id: 23
+                        ,field: ''
+                        ,children: [{
+                            title: '四级1-1-3-1'
+                            ,id: 24
+                            ,field: ''
+                            ,children: [{
+                                title: '五级1-1-3-1-1'
+                                ,id: 30
+                                ,field: ''
+                            },{
+                                title: '五级1-1-3-1-2'
+                                ,id: 31
+                                ,field: ''
+                            }]
+                        }]
+                    },{
+                        title: '三级1-1-1'
+                        ,id: 7
+                        ,field: ''
+                        ,children: [{
+                            title: '四级1-1-1-1 可允许跳转'
+                            ,id: 15
+                            ,field: ''
+                            ,href: 'https://www.layui.com/doc/'
+                        }]
+                    },{
+                        title: '三级1-1-2'
+                        ,id: 8
+                        ,field: ''
+                        ,children: [{
+                            title: '四级1-1-2-1'
+                            ,id: 32
+                            ,field: ''
+                        }]
+                    }]
+                },{
+                    title: '二级1-2'
+                    ,id: 4
+                    ,spread: true
+                    ,children: [{
+                        title: '三级1-2-1'
+                        ,id: 9
+                        ,field: ''
+                        ,disabled: true
+                    },{
+                        title: '三级1-2-2'
+                        ,id: 10
+                        ,field: ''
+                    }]
+                },{
+                    title: '二级1-3'
+                    ,id: 20
+                    ,field: ''
+                    ,children: [{
+                        title: '三级1-3-1'
+                        ,id: 21
+                        ,field: ''
+                    },{
+                        title: '三级1-3-2'
+                        ,id: 22
+                        ,field: ''
+                    }]
+                }]
+            }]
+
+
+        //基本演示
+        tree.render({
+            elem: '#test12'
+            ,data: data
+            ,showCheckbox: true  //是否显示复选框
+            ,id: 'demoId1'
+            ,isJump: true //是否允许点击节点时弹出新窗口跳转
+            ,click: function(obj){
+                var data = obj.data;  //获取当前点击的节点数据
+                layer.msg('状态：'+ obj.state + '<br>节点数据：' + JSON.stringify(data));
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css">
+</head>
+<body>
+<table class="layui-hide" id="test" lay-filter="test"></table>
+
+<table class="layui-hide" id="test2" lay-filter="test2"></table>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="export">导出</a>
+</script>
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://www.layuicdn.com/layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        var index = 1
+        table.render({
+            elem: '#test'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type:'numbers'},
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: '任务名称', title: '任务名称'}
+                , {field: '任务类型', title: '任务类型',}
+                , {field: '任务状态', title: '任务状态'}
+                , {field: '所属机构', title: '所属机构'}
+                , {field: '开始时间', title: '开始时间'}
+                , {field: '结束时间', title: '结束时间'}
+                , {field: '目标机构', title: '目标机构'}
+                , {field: '执行人', title: '执行人'}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+                {
+                    "id": 20000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+                {
+                    "id": 30000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+            ]
+            ,page: true
+        });
+        table.render({
+            elem: '#test2'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type:'numbers'},
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: '任务名称', title: '任务名称'}
+                , {field: '任务类型', title: '任务类型',}
+                , {field: '任务状态', title: '任务状态'}
+                , {field: '所属机构', title: '所属机构'}
+                , {field: '开始时间', title: '开始时间'}
+                , {field: '结束时间', title: '结束时间'}
+                , {field: '目标机构', title: '目标机构'}
+                , {field: '执行人', title: '执行人'}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+                {
+                    "id": 20000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+                {
+                    "id": 30000,
+                    "任务名称": "user-0",
+                    "任务类型": "user-0",
+                    "任务状态": "user-0",
+                    "所属机构": "user-0",
+                    "开始时间": "user-0",
+                    "结束时间": "user-0",
+                    "目标机构": "user-0",
+                    "执行人": "user-0",
+                },
+            ]
+            ,page: true
+        });
+        //监听行工具事件
+        table.on('tool(test)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'export') {
+                layer.msg("这是导出++")
+            }
+        });
+        table.on('tool(test2)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'export') {
+                layer.msg("这是导出")
+            }
+        });
+
+
+        $('.laytable-cell-numbers').html('')
+        table.on('checkbox(test)', function(obj){
+            console.log(this)
+            if($(this).attr("lay-filter")=="layTableAllChoose"){
+                if ($(this).is(":checked")) {
+                    var num = $("div[lay-filter=LAY-table-1] tbody tr td:first-child").length
+                    console.log(num)
+                    for (var i = 0; i < num; i++) {
+                        $("div[lay-filter=LAY-table-1] tbody tr td:first-child").eq(i).children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }else{
+                    $("div[lay-filter=LAY-table-1] tbody tr td:first-child").children(".laytable-cell-numbers").html("")
+                }
+            }else{
+                if ($(this).is(":checked")) {
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").length
+
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html(count)
+                    $(this).val();
+                    $(this).attr("data-value", count)
+                }else {
+                    var val = $(this).parent().parent().prev().children(".laytable-cell-numbers").html();
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                    //table2中的对应选中时重新排列
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").length
+                    var num = $("div[lay-filter=LAY-table-1] tbody tr td:first-child")
+                    console.log(count)
+                    var checkLength = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+                    var checkval = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked")
+                    for (var i = 0; i < checkLength; i++) {
+                        if (checkval.eq(i).parent().parent().prev().children(".laytable-cell-numbers").html() == val) {
+                            checkval.eq(i).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                            checkval.eq(i).removeClass("layui-form-checked")
+                            checkval.eq(i).prev().attr("checked",false)
+                        }
+                    }
+                    //当钱table中的数组重排
+                    for (var i = 0; i < count; i++) {
+                        $("div[lay-filter=LAY-table-1] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+
+                        $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+
+                    }
+
+                }
+            }
+        });
+
+        table.on('checkbox(test2)', function(obj){
+            console.log(this)
+            if($(this).attr("lay-filter")=="layTableAllChoose"){
+                if ($(this).is(":checked")) {
+                    var num = $("div[lay-filter=LAY-table-2] tbody tr td:first-child").length
+                    console.log(num)
+                    for (var i = 0; i < num; i++) {
+                        $("div[lay-filter=LAY-table-2] tbody tr td:first-child").eq(i).children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }else{
+                    $("div[lay-filter=LAY-table-2] tbody tr td:first-child").children(".laytable-cell-numbers").html("")
+                }
+            }else{
+                if ($(this).is(":checked")) {
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+                    console.log(count)
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html(count)
+                    $(this).val();
+                    $(this).attr("data-value", count)
+                }else {
+                    var val = $(this).parent().parent().prev().children(".laytable-cell-numbers").html();
+                    $(this).parent().parent().prev().children(".laytable-cell-numbers").html("")
+                    //table2中的对应选中时重新排列
+                    var count = ""
+                    count = $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").length
+
+                    var num = $("div[lay-filter=LAY-table-2] tbody tr td:first-child")
+                    console.log(count)
+                    for (var i = 0; i < count; i++) {
+                        $("div[lay-filter=LAY-table-2] tbody .layui-form-checked").eq(i).parent().parent().prev().children(".laytable-cell-numbers").html(i + 1)
+                    }
+                }
+            }
+        });
+    });
+
+</script>
+</html>

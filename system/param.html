@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>参数设置</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/3rd/layui/css/layui.css}"/>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.5/css/layui.css">
+    <style>
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+            <!-- invoice start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            参数设置
+                        </header>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">添加系统参数</button>
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <table class="layui-hide" id="test" lay-filter="test"></table>
+                        <script type="text/html" id="barDemo">
+                            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                            <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+                        </script>
+                    </section>
+                </div>
+            </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width: 60%">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            新建参数
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal tasi-form" method="get">
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">系统参数名称</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="系统参数名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">系统参数编码</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="系统参数编码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">系统参数值</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="系统参数值">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-lg-2">系统参数类型</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="系统参数类型">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            提交更改
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.scrollTo.min.js"></script>
+<script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+<!--common script for all pages-->
+<script src="../js/common-scripts.js"></script>
+
+            <script src="https://www.layuicdn.com/layui-v2.5.5/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            // ,url:'/test/table/demo1.json'
+            ,title: '用户数据表'
+            ,cols: [[
+                {type: 'checkbox'},
+                {field: 'id', title: 'ID',}
+                , {field: 'name1', title: '参数名称'}
+                , {field: 'name2', title: '参数编码',}
+                , {field: 'name3', title: '参数值'}
+                , {field: '参数类型', title: '参数类型'}
+                , {field: '参数状态', title: '参数状态'}
+                , {field: '操作', title: '操作', width: 240, toolbar: '#barDemo'}
+            ]],
+            data: [
+                {
+                    "id": 10000,
+                    "name": "user-0",
+                    "name2": "user-0",
+                    "name3": "女",
+                    "参数值": "女",
+                    "参数类型": "女",
+                    "参数状态": "女",
+                },
+            ]
+            ,page: true
+        });
+
+        //监听行工具事件
+        table.on('tool(test)', function(obj){
+            var data = obj.data;
+            //console.log(obj)
+            if(obj.event === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    obj.del();
+                    layer.close(index);
+                });
+            } else if(obj.event === 'edit'){
+
+                var html ='<div>\n' +
+                    '            <div>\n' +
+                    '                <div>\n' +
+                    '                    <div class="modal-body">\n' +
+                    '                        <form class="form-horizontal tasi-form" method="get">\n' +
+                    '                            <div class="form-group">\n' +
+                    '                                <label class="control-label col-lg-2">系统参数名称</label>\n' +
+                    '                                <div class="col-sm-10">\n' +
+                    '                                    <input type="hidden" name="id" >\n' +
+                    '                                    <input type="text" name="sysName" value="" class="form-control sysName" placeholder="系统参数名称">\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                            <div class="form-group">\n' +
+                    '                                <label class="control-label col-lg-2">系统参数编码</label>\n' +
+                    '                                <div class="col-sm-10">\n' +
+                    '                                    <input type="text" name="sysKey" class="form-control" placeholder="系统参数编码">\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                            <div class="form-group">\n' +
+                    '                                <label class="control-label col-lg-2">系统参数值</label>\n' +
+                    '                                <div class="col-sm-10">\n' +
+                    '                                    <input type="text" name="sysValue" class="form-control" placeholder="系统参数值">\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                            <div class="form-group">\n' +
+                    '                                <label class="control-label col-lg-2">系统参数类型</label>\n' +
+                    '                                <div class="col-sm-10">\n' +
+                    '                                    <input type="text" name="type" class="form-control" placeholder="系统参数类型">\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                        </form>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '        </div>'
+
+                layer.open({
+                    //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                    type:1,
+                    title:"修改用户信息",
+                    area: ['60%'],
+                    btn: ['关闭', '确认修改',],
+                    closeBtn: 1, //不显示关闭按钮
+                    content: html,
+                    yes: function(index, layero){
+                        //事件
+                        editData()
+                    }
+                });
+                setFormValue(data);//动态向表单赋值
+                console.log(data)
+                // layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            }
+        });
+    });
+
+    function setFormValue(data){
+        $("input[name=id]").attr("value",data.id);
+        $(".sysName").val(data.name);
+        $("input[name=sysKey]").val(data.name2);
+        $("input[name=sysValue]").val(data.name3);
+        $("input[name=type]").val(data.type);
+    }
+
+    /**
+     * 修改表单数据
+     */
+    function editData(){
+        var id =$("input[name=id]").val();
+        var sysName1 =$("input[name=sysName]").val();
+        console.log(sysName1)
+        layer.msg($(":input[name='sysName']").val())
+        return;
+        if(sysName==""){
+            layer.msg("请输入参数名称！！")
+            $("input[name=sysName]").focus()
+            return
+        }
+
+        var sysKey =$("input[name=sysKey]").val();
+
+        if(sysKey==""){
+            layer.msg("请输入参数编码！！")
+            $("input[name=sysKey]").focus()
+            return
+        }
+
+        var sysValue=$("input[name=sysValue]").val();
+        if(sysValue==""){
+            layer.msg("请输入参数值！！")
+            $("input[name=sysValue]").focus()
+            return
+        }
+        var type= $("input[name=type]").val();
+        if(type==""){
+            layer.msg("请输入参数类型！！")
+            $("input[name=type]").focus()
+            return
+        }
+
+        // $.ajax({
+        //     url:  "/param/update",
+        //     type: "POST",
+        //     data:{
+        //         id:id,
+        //         sysName:sysName,
+        //         sysKey:sysKey,
+        //         sysValue:sysValue,
+        //         type:type
+        //     },
+        //     cache:false,
+        //     dataType: "json",
+        //     success: function(data){
+        //         layer.msg(data.message);
+        //         if(data.code=="0"){
+        //             setTimeout("javascript:location.href='/param'", 1500);
+        //         }
+        //     },
+        //     error:function(err){
+        //         layer.msg("服务器内部错误！")
+        //     }
+        // });
+
+    }
+
+
+</script>
+
+<!--            <script  th:inline="javascript" th:src="@{/3rd/layui/layui.js}"></script>-->
+<!--            <script th:inline="javascript" th:src="@{/pagejs/system/param.js}"></script>-->
+
+</body>
+</html>

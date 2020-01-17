@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="http://www.itxst.com/package/jquery-3.3.1/jquery.js"></script>
+    <link href="http://www.itxst.com/package/bootstrap-4.3.1/css/bootstrap.css" rel="stylesheet" />
+    <link href="http://www.itxst.com/package/bootstrap-table-1.15.3/bootstrap-table.css" rel="stylesheet" />
+    <script src="http://www.itxst.com/package/bootstrap-table-1.15.3/bootstrap-table.js"></script>
+    <title>bootstrap table append在线例子</title>
+    <style>
+        .table-demo {
+            width: 80%;
+            margin: 30px auto 0px auto;
+        }
+        .titles {
+            float: right;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div id="toolbar">
+    <button onclick="loadData()">append追加数据到最后</button>
+</div>
+<div class="table-demo">
+    <table id="table"  ></table>
+</div>
+<div class="table-demo">
+    <table id="table2"  ></table>
+</div>
+<script>
+    //设置需要显示的列
+    var columns = [
+        {
+            field:"Id",
+            title: 'ID'
+        }, {
+            field: 'Car',
+            title: '品牌'
+        } ];
+    var data= [{
+        Id: 10,
+        Car: 'C5',
+    }, {
+        Id: 20,
+        Car: 'C6',
+    }, {
+        Id: 30,
+        Car: 'C7',
+    } ];
+    var columns2 = [
+        {
+            field:"Id",
+            title: 'ID'
+        }, {
+            field: 'Car',
+            title: '品牌'
+        } ];
+    var data2= [{
+        Id: 10,
+        Car: 'C5',
+    }, {
+        Id: 20,
+        Car: 'C6',
+    }, {
+        Id: 30,
+        Car: 'C7',
+    } ];
+    //bootstrap table初始化数据
+    $('#table').bootstrapTable({
+        toolbar:"#toolbar",
+        data:data,
+        columns: columns,
+        pageSize:2,
+        pagination:true
+    });
+    $('#table2').bootstrapTable({
+        toolbar:"#toolbar",
+        data:data2,
+        columns: columns2,
+        pageSize:2,
+        pagination:true
+    });
+
+
+    function loadData()
+    {
+        //newData需要追加的新数据
+        var newData = [{
+            Id: 3000,
+            Car: 'CAR001',
+        }, {
+            Id: 3002,
+            Car: 'CAR001',
+        }, {
+            Id: 3003,
+            Car: 'CAR001',
+        } ];
+
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.html">
+
+    <title>江苏有线三网融合扭曲中心数据中心-设备线缆管理系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <link href="./webgl/css/page.css" rel="stylesheet">
+    <style>
+
+    </style>
+
+
+    <script type="text/javascript" src="./webgl/js/three.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-2.1.0.js"></script>-->
+    <script type="text/javascript" src="./webgl/js/D.min.js"></script>
+    <script type="text/javascript" src="./webgl/js/doT.min.js"></script>
+    <!--<script type="text/javascript" src="js/photo-sphere-viewer.min.js"></script>-->
+    <script type="text/javascript" src="./webgl/js/WebGL.js"></script>
+    <script type="text/javascript" src="./webgl/js/OrbitControls.js"></script>
+    <script type="text/javascript" src="./webgl/js/stats.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section id="container" class="">
+        <!--header start-->
+        <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <!--                <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>-->
+                <div data-original-title="切换导航" data-placement="right" class="icon-reorder tooltips"></div>
+            </div>
+            <!--logo start-->
+            <!--            <a href="#" class="logo">Flat<span>lab</span></a>-->
+            <a href="#" class="logo">江苏在线</a>
+            <!--logo end-->
+
+            <div class="top-nav ">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="img/avatar1_small.jpg">
+                            <span class="username">王德辉</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <!--                            <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>-->
+                            <!--                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>-->
+                            <!--                            <li><a href="#"><i class="icon-bell-alt"></i> Notification</a></li>-->
+                            <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <iframe id="iframeLeft" src="nav.html" frameborder="0" style="width: 100%;height: 100%;position: fixed;background: #2a3542"></iframe>
+
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row mt-15">
+                            <div class="col-sm-6">
+                                <div class="mt-15" style="background: #fff;border-radius: 6px">
+                                    <div id="status" style="height: 220px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mt-15" style="background: #fff;border-radius: 6px">
+                                    <div id="status2" style="height: 220px">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px">
+                            <div class="col-md-12">
+                                <div class="mt-15" style="background: #fff;border-radius: 6px">
+                                    <div id="scrapped" style="height: 220px">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="ification ification-warp">
+                                    <div class="ification-top">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <img src="img/pcshebei.png" alt="设备">
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <small class="stat-label" style="margin-top: 5px">在线设备</small>
+                                                <h1 class="stat-h1" style="margin-top: 5px">23</h1>
+<!--                                                <span class="RealTimeStatistics-tag">实时</span>-->
+                                            </div>
+
+                                        </div>
+                                        <div class="row" style="margin-top: 20px">
+                                            <div class="col-xs-12">
+                                                <small class="stat-label">23</small>
+                                                <p class="">当前分类总记录数</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="ification2 ification-warp">
+                                    <div class="ification-top">
+                                        <p class="RealTimeStatistics-titleText">机房数量</p>
+                                        <span class="RealTimeStatistics-tag">实时</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="ification-bottom num2"></h2>
+                                        <div>
+                                            <p class="RealTimeStatistics-total num2"></p>
+                                            <p class="RealTimeStatistics-desc">当前分类总记录数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="ification3 ification-warp">
+                                    <div class="ification-top">
+                                        <p class="RealTimeStatistics-titleText">机架数量</p>
+                                        <span class="RealTimeStatistics-tag">实时</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="ification-bottom num3"></h2>
+                                        <div>
+                                            <p class="RealTimeStatistics-total num3"></p>
+                                            <p class="RealTimeStatistics-desc">当前分类总记录数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="ification4 ification-warp">
+                                    <div class="ification-top">
+                                        <p class="RealTimeStatistics-titleText">设备分类</p>
+                                        <span class="RealTimeStatistics-tag">实时</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="ification-bottom num4"></h2>
+                                        <div>
+                                            <p class="RealTimeStatistics-total num4"></p>
+                                            <p class="RealTimeStatistics-desc">当前分类总记录数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="ification5 ification-warp">
+                                    <div class="ification-top">
+                                        <p class="RealTimeStatistics-titleText">行政部门</p>
+                                        <span class="RealTimeStatistics-tag">实时</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="ification-bottom num5"></h2>
+                                        <div>
+                                            <p class="RealTimeStatistics-total num5"></p>
+                                            <p class="RealTimeStatistics-desc">当前分类总记录数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="ification6 ification-warp">
+                                    <div class="ification-top">
+                                        <p class="RealTimeStatistics-titleText">地市级</p>
+                                        <span class="RealTimeStatistics-tag">实时</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="ification-bottom num6"></h2>
+                                        <div>
+                                            <p class="RealTimeStatistics-total num6"></p>
+                                            <p class="RealTimeStatistics-desc">当前分类总记录数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mt-15"  style="background: #fff;border-radius: 6px">
+                            <div class="" style="font-weight: 700;font-size: 18px;padding: 10px 0 0 20px;color: #000">
+                                江苏省区域地图
+                            </div>
+                            <div id="mapadd" style="height: 420px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="col-sm-8">
+                            <div class="mt-15" style="background: #fff;border-radius: 6px">
+                                <div id="quantity" style="height: 340px">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-4">
+                            <div class="mt-15" style="background: #fff;border-radius: 6px">
+                                <div style="padding: 10px 0 0 20px">
+                                    <p style="font-size: 18px;font-weight: 700;color: #000;">机房3维视图</p>
+                                </div>
+                                <div style="width: 100%;">
+                                    <a href="#" style="display: flex;justify-content: center;align-items: center">
+                                        <img src="./img/imgd1.jpg" alt="图片" style="width:80%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--main content end-->
+    </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
+    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.customSelect.min.js"></script>
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script src="js/map/echarts.min.js"></script>
+    <script src="js/map/jiangsu.js"></script>
+    <script src="js/map/index.js"></script>
+    <!--    <script src="js/sparkline-chart.js"></script>-->
+    <!--    <script src="js/easy-pie-chart.js"></script>-->
+
+    <script>
+
+
+        function status(list) {
+            var wxStatus = echarts.init(document.getElementById('status'));
+
+            wxStatus.setOption({
+                    title : {
+                        text: '设备状态',
+                        x:'left',
+                        y: 'top',
+                        padding: [10, 15]
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    },
+                    legend: {
+                        icon: "circle",   //  这个字段控制形状  类型包括 circle，rect ，roundRect，triangle，diamond，pin，arrow，none
+                        itemWidth: 10,  // 设置宽度
+                        itemHeight: 10, // 设置高度
+                        orient: 'horizontal',
+                        x: 'left',
+                        bottom:'0',
+                        left: 'center',
+                        data: names
+                    },
+                    color:['#46a1ff', '#59cb74','#4dcccb'],
+                    series: [
+                        {
+                            name: '访问来源',
+                            type: 'pie',
+                            radius: ['40%', '60%'],
+                            avoidLabelOverlap: false,
+                            label: {
+                                normal: {
+                                    show: false,
+                                    position: 'center'
+                                },
+                                emphasis: {
+                                    show: true,
+                                    textStyle: {
+                                        fontSize: '20',
+                                        fontWeight: 'bold'
+                                    }
+                                }
+                            },
+                            labelLine: {
+                                normal: {
+                                    show: false
+                                }
+                            },
+                            data: brower
+                        }
+                    ]
+            });
+            var names = []; //类别数组（用于存放饼图的类别）
+            var brower = [];
+
+            $.each(list, function(index, item) {
+                names.push(item.value); //挨个取出类别并填入类别数组
+                brower.push({
+                    name: item.value,
+                    value: item.name
+                });
+            });
+            wxStatus.setOption({
+                legend: {
+                    data: names
+                },
+                series: [{
+                    data: brower
+                }]
+            })
+            // wxStatus.setOption(option);
+        }
+        function status2(list) {
+            var wxStatus = echarts.init(document.getElementById('status2'));
+            wxStatus.setOption({
+                title : {
+                    text: '设备状态',
+                    x:'left',
+                    y: 'top',
+                    padding: [10, 15]
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                legend: {
+                    icon: "circle",   //  这个字段控制形状  类型包括 circle，rect ，roundRect，triangle，diamond，pin，arrow，none
+                    itemWidth: 10,  // 设置宽度
+                    itemHeight: 10, // 设置高度
+                    orient: 'horizontal',
+
+                    x: 'left',
+                    bottom:'0',
+                    left: 'center',
+                    data: names
+                },
+                color:['#46a1ff', '#59cb74','#4dcccb'],
+                series: [
+                    {
+                        name: '访问来源',
+                        type: 'pie',
+                        radius: ['40%', '60%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '20',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data: brower
+                    }
+                ]
+            });
+            var names = []; //类别数组（用于存放饼图的类别）
+            var brower = [];
+
+            $.each(list, function(index, item) {
+                names.push(item.value); //挨个取出类别并填入类别数组
+                brower.push({
+                    name: item.value,
+                    value: item.name
+                });
+            });
+            wxStatus.setOption({
+                legend: {
+                    data: names
+                },
+                series: [{
+                    data: brower
+                }]
+            })
+        }
+        function scrapped(list){
+            var wxScrapped = echarts.init(document.getElementById('scrapped'));
+
+            var names=[],
+                brower=[];
+
+            $.each(list, function(index, item) {
+                names.push(item.name); //挨个取出类别并填入类别数组
+                brower.push(item.value);
+            })
+
+            // option = {
+            //     title : {
+            //         text: '设备报废',
+            //         x:'left',
+            //         y: 'top',
+            //         padding: [10, 15]
+            //     },
+            //     color: ['#46a1ff'],
+            //     tooltip : {
+            //         trigger: 'axis',
+            //         axisPointer : {// 坐标轴指示器，坐标轴触发有效
+            //             type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            //         }
+            //     },
+            //     grid: {
+            //         left: '3%',
+            //         right: '4%',
+            //         bottom: '3%',
+            //         containLabel: true
+            //     },
+            //     xAxis : [
+            //         {
+            //
+            //             type : 'category',
+            //             data : names,
+            //             axisTick: {
+            //                 alignWithLabel: true
+            //             }
+            //         }
+            //     ],
+            //     yAxis : [
+            //         {
+            //
+            //             type : 'value'
+            //         }
+            //     ],
+            //     series : [
+            //         {
+            //             name:'报废数量',
+            //             type:'bar',
+            //             barWidth: '60%',
+            //             data:brower
+            //         }
+            //     ]
+            // };
+
+
+            option = {
+                title : {
+                            text: '设备报废',
+                            x:'left',
+                            y: 'top',
+                            padding: [10, 15]
+                        },
+                color: ['#003366', '#006699', '#4cabce', '#e5323e'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                legend: {
+                    icon: "circle",   //  这个字段控制形状  类型包括 circle，rect ，roundRect，triangle，diamond，pin，arrow，none
+                    itemWidth: 10,  // 设置宽度
+                    itemHeight: 10, // 设置高度
+                    top:10,
+                    data: ['设备数量', '报废数量', '在线数量', '初始数量']
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                    }
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        axisTick: {show: false},
+                        data: ['2012', '2013', '2014', '2015', '2016']
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: '设备数量',
+                        type: 'bar',
+                        barGap: 0,
+                        data: [320, 332, 301, 334, 390]
+                    },
+                    {
+                        name: '报废数量',
+                        type: 'bar',
+                        data: [220, 182, 191, 234, 290]
+                    },
+                    {
+                        name: '在线数量',
+                        type: 'bar',
+                        data: [150, 232, 201, 154, 190]
+                    },
+                    {
+                        name: '初始数量',
+                        type: 'bar',
+                        data: [98, 77, 101, 99, 40]
+                    }
+                ]
+            };
+            wxScrapped.setOption(option);
+        }
+        function quanTity(list){
+            var Tjtity = echarts.init(document.getElementById('quantity'));
+
+            var series=[]
+            for(var i = 0;i<list.length;i++){
+                series.push({
+                    name: list[i].name,
+                    data: list[i].data,
+                    symbolSize:10,
+                    symbol:'circle',
+                    type:'line',
+                    stack: '总量',
+                })
+            }
+
+            option = {
+                title: {
+                    padding: [10, 15],
+                    text: '数量统计折线图',
+                },
+                tooltip: {
+                    orient: 'horizontal',
+                    x: 'left',
+                    trigger: 'axis'
+                },
+                legend: {
+                    icon: "circle",   //  这个字段控制形状  类型包括 circle，rect ，roundRect，triangle，diamond，pin，arrow，none
+                    itemWidth: 10,  // 设置宽度
+                    itemHeight: 10, // 设置高度
+                    orient: 'horizontal',
+                    data:['设备维修','报废设备','设备调用','设备借用'],
+                    top:10,
+                },
+                color:['#EE7069', '#1890FF','#47c86c','#f7da47'],
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2014','2015','2016','2017','2018','2019']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: series
+            };
+            Tjtity.setOption(option);
+        }
+
+
+
+        //
+        // $('#sidebar-collapse').click(function (){
+        //     setTimeout(function () { doresize(); }, 50);
+        //     if($('#navbar').hasClass("top-min")){
+        //         $('#navbar').removeClass("top-min");
+        //     }else{
+        //         $('#navbar').addClass("top-min");
+        //
+        //     }
+        //
+        // });
+
+        doresize()
+        function doresize() {
+            var maps = echarts.init(document.getElementById('mapadd'));
+            maps.resize();
+            maps.on('click', function(params){
+                //change_region(params.name);
+                //alert(params.name);
+                ajaxname(params.data.mid)
+                console.log(params.data.mid);//此处写点击事件内容
+            });
+
+        }
+        ajaxname(1)
+        function ajaxname(mid){
+            console.log(mid)
+
+            $.ajax({
+                url: "./data.json",
+                type: 'get',
+                dataType: "json",
+                success: function(res) {
+                    console.log(res)
+                    var data={}
+                    for(var i=0;i<res.length;i++){
+                        if(res[i].id==mid){
+                            data=res[i]
+                        }
+                    }
+                    var list=data.value.list
+                    var list2=data.value.list2
+                    var baofei=data.value.baofei
+                    var tongji=data.value.tongji
+
+                    status(list)
+                    status2(list2)
+                    scrapped(baofei)
+                    quanTity(tongji)
+                    console.log(data)
+                    var num = data.value.num
+                    $(".num1").text(num.online1)
+                    $(".num2").html(num.online2)
+                    $(".num3").html(num.online3)
+                    $(".num4").html(num.online4)
+                    $(".num5").html(num.online5)
+                    $(".num6").html(num.online6)
+                    // doresize()
+                }
+            })
+
+        }
+
+
+
+
+        //owl carousel
+
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true
+
+            });
+        });
+
+        //custom select box
+
+        $(function() {
+            $('select.styled').customSelect();
+        });
+    </script>
+
+
+</body>
+
+</html>

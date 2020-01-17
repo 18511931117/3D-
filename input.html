@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<button id="btn">点击</button>
+<input id="val" type="text" >
+</body>
+</html>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+
+   $("#btn").on('click',function () {
+       var input = $('#val').attr().val()
+       console.log(input)
+   })
+</script>
